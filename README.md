@@ -1,1 +1,1 @@
-# game_dev_lab2
+# Game development - Lab #2

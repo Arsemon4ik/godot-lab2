@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dmjntlcf4wmgh"]
+
+[ext_resource type="Script" path="res://next_level.gd" id="1_f3c42"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ntd8x"]
+size = Vector3(0.015, 0.034, 0.0101184)
+
+[node name="Area3D" type="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 2, 0, 0, 0, 1, -1.88413, -2.27364, 3.59387)
+script = ExtResource("1_f3c42")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
+transform = Transform3D(160, 0, 0, 0, 160, 0, 0, 0, 160, 0.616538, 1.9617, -3.62459)
+shape = SubResource("BoxShape3D_ntd8x")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
